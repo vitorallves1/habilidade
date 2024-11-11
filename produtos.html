@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - TechStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>TechStore</h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="carrinho.html">Carrinho</a>
+                <a href="contato.html">Contato</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categorias</button>
+                    <div class="dropdown-content">
+                        <a href="#">Notebooks</a>
+                        <a href="#">Desktops</a>
+                        <a href="#">Acessórios</a>
+                    </div>
+                </div>
+            </nav>
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar produtos..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+    </header>
+
+    <section class="products">
+        <h2>Nossos Produtos</h2>
+
+        <!-- Produto 1 -->
+        <div class="product-card">
+            <img src="download.jpg" alt="Notebook Gamer" class="product-image">
+            <h3>Notebook Gamer</h3>
+            <p>Desempenho excelente para jogos e aplicações pesadas.</p>
+            <p>Preço: R$5.000,00</p>
+            <button onclick="adicionarAoCarrinho('Notebook Gamer', 5000.00, 'download.jpg')">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product-card">
+            <img src="download (1).jpg" alt="Desktop Profissional" class="product-image">
+            <h3>Desktop Profissional</h3>
+            <p>Potência e estabilidade para seu ambiente de trabalho.</p>
+            <p>Preço: R$3.800,00</p>
+            <button onclick="adicionarAoCarrinho('Desktop Profissional', 3800.00, 'download (1).jpg')">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product-card">
+            <img src="download (2).jpg" alt="Mouse Gamer" class="product-image">
+            <h3>Mouse Gamer</h3>
+            <p>Alta precisão e conforto para longas sessões de jogo.</p>
+            <p>Preço: R$150,00</p>
+            <button onclick="adicionarAoCarrinho('Mouse Gamer', 150.00, 'download (2).jpg')">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="product-card">
+            <img src="download (3).jpg" alt="Teclado Mecânico" class="product-image">
+            <h3>Teclado Mecânico</h3>
+            <p>Teclas retroiluminadas e resposta rápida para jogos.</p>
+            <p>Preço: R$200,00</p>
+            <button onclick="adicionarAoCarrinho('Teclado Mecânico', 200.00, 'download (3).jpg')">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="product-card">
+            <img src="download (4).jpg" alt="Headset Gamer" class="product-image">
+            <h3>Headset Gamer</h3>
+            <p>Som envolvente e conforto para horas de uso.</p>
+            <p>Preço: R$300,00</p>
+            <button onclick="adicionarAoCarrinho('Headset Gamer', 300.00, 'download (4).jpg')">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="product-card">
+            <img src="download (5).jpg" alt="Webcam Full HD" class="product-image">
+            <h3>Webcam Full HD</h3>
+            <p>Qualidade de imagem nítida para videoconferências.</p>
+            <p>Preço: R$250,00</p>
+            <button onclick="adicionarAoCarrinho('Webcam Full HD', 250.00, 'download (5).jpg')">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 TechStore - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function adicionarAoCarrinho(nomeDoItem, precoDoItem, imagemDoItem) {
+            const produto = {
+                nome: nomeDoItem,
+                preco: precoDoItem,
+                imagem: imagemDoItem
+            };
+
+            
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+            
+            carrinho.push(produto);
+
+            
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+            
+            alert('Produto adicionado ao carrinho!');
+        }
+    </script>
+</body>
+</html>

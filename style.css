@@ -1,0 +1,507 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #333333;
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1c1c1e;
+    color: #f4f4f9;
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 1.8rem;
+    color: #ff7b00;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff7b00;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #1c1c1e;
+    color: #0073e6;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 0.8rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff7b00;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0.3rem;
+    width: 250px;
+    margin-left: auto;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 0.3rem;
+    flex: 1;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #0073e6;
+    padding: 0 0.5rem;
+}
+
+.search-bar button:hover {
+    color: #ff7b00;
+}
+
+/* Seção de Cadastro */
+.cadastro-section {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cadastro-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1c1c1e;
+}
+
+.cadastro-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cadastro-section input,
+.cadastro-section textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.cadastro-section button {
+    background-color: #ff7b00;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cadastro-section button:hover {
+    background-color: #e64a19;
+}
+
+/* Seção de Produtos */
+.products {
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    color: #1c1c1e;
+    margin-bottom: 1rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    transition: transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    width: calc(33.333% - 2rem); /* Três produtos por linha */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; /* Altura fixa */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    color: #0073e6;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333333;
+}
+
+.product-card button {
+    background-color: #ff7b00;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.product-card button:hover {
+    background-color: #e64a19;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Carrinho */
+/* Carrinho de Compras */
+.cart {
+    padding: 20px;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    font-size: 2rem;
+    color: #1c1c1e;
+    margin-bottom: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cart-item .remove-item {
+    background-color: #e64a19;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+    transition: background-color 0.3s;
+}
+
+.cart-item .remove-item:hover {
+    background-color: #d84315;
+}
+
+#total-price {
+    font-size: 1.5rem;
+    color: #1c1c1e;
+    margin-top: 1rem;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cart-actions button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-actions button:hover {
+    background-color: #0056b3;
+}
+
+.cart-actions .clear-cart {
+    background-color: #e64a19;
+}
+
+.cart-actions .clear-cart:hover {
+    background-color: #d84315;
+}
+
+/* Busca CEP */
+.cep-search {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cep-search input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.cep-search button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cep-search button:hover {
+    background-color: #0056b3;
+}
+
+#endereco {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #1c1c1e;
+    color: #f4f4f9;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Seção de Contato */
+.contact {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1c1c1e;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact button {
+    background-color: #ff7b00;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #e64a19;
+}
+
+/* Estilo de Tabela (exemplo de gerenciamento) */
+.table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.table th {
+    background-color: #0073e6;
+    color: #ffffff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para modais */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 500px;
+}
+
+.modal h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.modal p {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+.modal button {
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}

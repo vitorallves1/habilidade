@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>TechStore</h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="carrinho.html">Carrinho</a>
+                <a href="contato.html">Contato</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categorias</button>
+                    <div class="dropdown-content">
+                        <a href="#">Notebooks</a>
+                        <a href="#">Desktops</a>
+                        <a href="#">Acessórios</a>
+                    </div>
+                </div>
+            </nav>
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar produtos..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+    </header>
+    <section class="cadastro-section">
+        <h2>Cadastre-se para receber novidades e promoções</h2>
+        <form action="processForm.php" method="POST">
+            <input type="text" name="name" id="name" placeholder="Nome Completo" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <textarea name="details" id="details" placeholder="Descreva suas necessidades ou interesses"></textarea>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 TechStore - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
